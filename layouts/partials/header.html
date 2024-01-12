@@ -1,0 +1,41 @@
+<div class="navbar flex-col lg:flex-row">
+    <div class="navbar-start">
+        <div class="self-center whitespace-nowrap text-xl font-semibold dark:text-white pl-4">
+            <a href="/">
+                {{ .Site.Title }}
+            </a>
+        </div>
+    </div>
+    <div class="navbar-center">
+        <ul class="menu menu-vertical lg:menu-horizontal">
+            {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+            <div class="group">
+                <li class="px-2 text-base">
+                    <a href="{{ .URL }}">
+                        {{ .Title }}
+                    </a>
+                </li>
+                <div class="relative">
+                    <ul
+                        class="p-2 bg-white min-w-max absolute mt-2 shadow rounded duration-300 transition-all opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                        {{ range .Children }}
+                        <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            {{ else }}
+            <li class="px-2 text-base">
+                <a href="{{ .URL }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+    <div class="navbar-end">
+        <a href="https://github.com/joranmulderij" target="_blank" class="w-8 fill-black hover:fill-gray-600">
+            {{ partial "github_icon.html" }}
+        </a>
+    </div>
+</div>

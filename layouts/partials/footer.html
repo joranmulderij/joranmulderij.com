@@ -1,0 +1,23 @@
+<footer class="footer footer-center p-10 bg-[#d5dae5] text-base-content rounded">
+    <div class="grid grid-flow-col gap-4">
+        {{ range .Site.Menus.main }}
+            <a href={{ .URL }} class="link link-hover">{{ .Title }}</a>
+        {{ end }}
+    </div>
+    <div>
+        <div class="grid grid-flow-col gap-4 place-items-center">
+            <a href="mailto:dev@joranmulderij.com" target="_blank" class="w-8 fill-black hover:fill-gray-600">
+                {{ partial "email_icon.html" }}
+            </a>
+            <a href="https://github.com/joranmulderij" target="_blank" class="w-8 fill-black hover:fill-gray-600">
+                {{ partial "github_icon.html" }}
+            </a>
+            <a href="https://www.youtube.com/@joranmulderij" target="_blank" class="w-8 fill-black hover:fill-gray-600">
+                {{ partial "youtube_icon.html" }}
+            </a>
+        </div>
+    </div>
+    <div>
+        <p>Copyright © {{ .Site.LastChange }} {{.Site.Copyright}}</p>
+    </div>
+</footer>

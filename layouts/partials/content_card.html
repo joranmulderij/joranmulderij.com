@@ -1,0 +1,25 @@
+<div class="bg-white my-8 rounded-xl">
+    <a href="{{ .RelPermalink | absURL }}">
+        <div class="flex flex-col lg:flex-row">
+            {{ if .Params.image }}
+            <img class="w-44 object-contain h-44 rounded-xl p-2" src="{{ .Params.image }}" alt="" />
+            {{ else }}
+            {{ end }}
+            <div class="flex-1 p-8">
+                <div class="flex">
+                    <h2 class="flex-1 text-lg font-semibold">
+                        {{.Title}}
+                    </h2>
+                    <div class="pt-1">
+                        {{ range .Params.tags }}
+                        <span class="badge badge-primary mx-2">
+                            {{ . }}
+                        </span>
+                        {{ end }}
+                    </div>
+                </div>
+                <p class="mt-4">{{ .Params.summary }}</p>
+            </div>
+        </div>
+    </a>
+</div>

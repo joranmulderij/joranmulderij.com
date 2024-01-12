@@ -1,0 +1,16 @@
+<input type="text" id="search_input" placeholder="Search" class="w-full p-2 my-2 input bg-white"
+    value="{{ .filter.q }}"
+    {{ if .filter.q }}autofocus{{ end }} />
+
+<script>
+    var input = document.getElementById("search_input");
+    setTimeout(function () { input.selectionStart = input.selectionEnd = 10000; }, 0);
+    input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            const urlParams = new URLSearchParams(window.location.search);
+            urlParams.set('q', input.value);
+            window.location.search = urlParams;
+        }
+    });
+</script>

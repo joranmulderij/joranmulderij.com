@@ -1,0 +1,14 @@
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{{.Site.Title}} - {{.Title}}</title>
+    <meta name="description" content="{{ .Site.Params.description }} - {{ .Params.description }}">
+    <link rel="stylesheet" href="/css/style.css">
+    {{ if .Params.icon }}
+    <link rel="icon" href="{{ .Params.icon }}" sizes="32x32">
+    {{ end }}
+    <link rel="manifest" href="/manifest.json">
+    <!-- Note: temporary -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>

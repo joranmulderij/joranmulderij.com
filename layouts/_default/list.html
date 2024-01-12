@@ -1,0 +1,35 @@
+{{/*{"page_size": 10}*/}}
+
+{{ define "main" }}
+
+{{/* partial "search_bar.html" . */}}
+
+<script>
+    function toggleTagFilter(tag) {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('tag')) {
+            urlParams.delete('tag');
+        } else {
+            urlParams.set('tag', tag);
+        }
+        window.location.search = urlParams;
+    }
+</script>
+
+{{/*<div>
+    {{ range .page.children_info.tags }}
+    <button class="mx-2 inline" onclick="toggleTagFilter('{{.}}')">
+        <span class="badge {{ if eq $tagFilter . }}badge-primary{{ else }}badge-ghost{{ end }}">
+            {{ . }}
+        </span>
+    </button>
+    {{ end }}
+</div>*/}}
+<ul>
+    {{ range .Pages }}
+    <li>
+        {{ partial "content_card.html" . }}
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

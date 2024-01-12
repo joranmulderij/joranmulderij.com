@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ partial "head.html" . }}
+
+<body>
+    <div style="display: contents">
+        <div class="flex flex-col min-h-screen">
+            <div class="flex-1 flex flex-row justify-center">
+                <div class="w-[70em] flex flex-col">
+                    {{ partial "header.html" . }}
+                    {{ block "main" . }}{{ end }}
+                </div>
+            </div>
+            <div class="flex-none">
+                {{ partial "footer.html" . }}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

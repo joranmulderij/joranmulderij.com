@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="m-2">
+    {{ if .Params.image }}
+    <img class="w-44 object-contain h-44 rounded-xl float-left mr-4 p-2" src="{{ .Params.image }}" alt="" />
+    {{ end }}
+    <h1 class="text-2xl font-semibold mb-4">{{ .Title }}</h1>
+    <div class="content mb-4">{{ .Content }}</div>
+</div>
+{{ end }}
