@@ -1,14 +1,14 @@
 {{ define "main" }}
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 my-4">
-	{{ template "contact_card.html" (dict 
+	{{ partial "contact_card.html" (dict 
 		"href" "mailto:dev@joranmulderij.com"
 		"text" "dev@joranmulderij.com"
 		"icon" "email_icon") }}
-	{{ template "contact_card.html" (dict
+	{{ partial "contact_card.html" (dict
 		"href" "https://github.com/joranmulderij"
 		"text" "joranmulderij"
 		"icon" "github_icon") }}
-	{{ template "contact_card.html" (dict
+	{{ partial "contact_card.html" (dict
 		"href" "https://www.youtube.com/@joranmulderij"
 		"text" "@joranmulderij"
 		"icon" "youtube_icon") }}

@@ -1391,6 +1391,10 @@ html {
   display: contents;
 }
 
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
 .h-44 {
   height: 11rem;
 }
@@ -1427,9 +1431,17 @@ html {
   width: 100%;
 }
 
+.w-12 {
+  width: 3rem;
+}
+
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
+}
+
+.min-w-0 {
+  min-width: 0px;
 }
 
 .max-w-4xl {
@@ -1563,6 +1575,14 @@ html {
 
 .pt-\[10vh\] {
   padding-top: 10vh;
+}
+
+.pt-\[1em\] {
+  padding-top: 1em;
+}
+
+.pt-\[0\.2rem\] {
+  padding-top: 0.2rem;
 }
 
 .text-center {
