@@ -6,6 +6,8 @@ draft: false
 tags:
   - Finite Element
   - Dart
+image: /img/dartfem.png
+summary: How I built dartfem, a finite element solver written in Dart.
 ---
 How I built dartfem, a finite element solver written in Dart.
 

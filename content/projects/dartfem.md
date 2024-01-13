@@ -8,6 +8,7 @@ tags:
   - Dart
   - Flutter
 summary: A finite element solver written in Dart.
+image: /img/dartfem.png
 ---
 
 A finite element solver written in Dart.
