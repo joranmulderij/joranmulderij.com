@@ -9,4 +9,4 @@ menu:
 header: Hi, I'm Joran Mulderij
 ---
 
-I'm a 19 year old Software Engineer and Mechanical Engineering student from the Netherlands, currently studying at the University of Twente.
+I'm a 22 year old Software Engineer and Mechanical Engineering student from the Netherlands, currently studying at the University of Twente.
